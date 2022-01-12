@@ -61,11 +61,13 @@ h3 {
 
 form button {
     cursor: pointer;
+    background-color: var(--blue);
+    color: var(--title);
 }
 
 form input, select, button {
-    background-color: var(--title);
-    border: none;
+    background-color: var(--background);
+    border: var(--title) 1px solid;
     padding: .3rem;
     margin: .3rem;
     font-family: 'Quicksand', sans-serif;
