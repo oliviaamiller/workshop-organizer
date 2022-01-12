@@ -9,6 +9,11 @@ checkAuth();
 
 const form = document.querySelector('form');
 const logoutButton = document.getElementById('logout');
+const workshopButton = document.getElementById('workshops-page');
+
+workshopButton.addEventListener('click', () => {
+    window.location.href = '../workshops';
+});
 
 form.addEventListener('submit', async(e) => {
     e.preventDefault();
@@ -23,7 +28,7 @@ form.addEventListener('submit', async(e) => {
         workshop_id: workshopId
     });
     
-    form.reset();
+    window.location.href = '../workshops';
 });
 
 window.addEventListener('load', async() => {

@@ -1,3 +1,9 @@
+:root {
+    --title: rgb(227, 231, 245);
+    --blue: rgb(58, 58, 174);
+    --background: rgb(50, 63, 74);
+}
+
 * {
     box-sizing: border-box;
 }
@@ -7,5 +13,28 @@ html, body {
     height: 100%;
     padding: 0;
     margin: 0;
+    background-color: var(--background);
 }
 
+h3 {
+    font-family: 'Codystar', sans-serif;
+    font-size: 2.5rem;
+    color: var(--title);
+    
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.buttons button {
+    color: var(--background);
+    font-family: sans-serif;
+    text-transform: uppercase;
+    background-color: var(--blue);
+    border: none;
+    cursor: pointer;
+
+}
