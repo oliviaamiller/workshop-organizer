@@ -5,7 +5,7 @@ import {
     deleteParticipant
 } from '../fetch-utils.js';
 
-import { renderParticipant } from '..render-utils.js';
+import { renderParticipant } from '../render-utils.js';
 
 checkAuth();
 
