@@ -20,11 +20,12 @@ html, body {
 
 h3 {
     font-family: 'Codystar', sans-serif;
-    font-size: 2.5rem;
+    font-size: 2.8rem;
     color: var(--title);
     display: flex;
     flex-direction: row;
     justify-content: center;
+    letter-spacing: .5rem;
     
 }
 
@@ -43,6 +44,7 @@ h3 {
     color: var(--background);
     font-family: 'Quicksand', sans-serif;
     font-weight: 700;
+    letter-spacing: .08rem;
     text-transform: uppercase;
     background-color: var(--pink);
     border: none;
@@ -68,8 +70,18 @@ form input, select, button {
     margin: .3rem;
     font-family: 'Quicksand', sans-serif;
     font-weight: 400;
-
+    letter-spacing: .08rem;
+    color: var(--pink);
 }
+
+input::placeholder {
+    color: var(--pink);
+}
+
+#input {
+    color: var(--pink);
+}
+
 
 .center-form {
     display: flex;
@@ -97,6 +109,7 @@ form input, select, button {
     margin: .5rem 1rem;
     font-family: 'Quicksand', sans-serif;
     font-weight: 500;
+    letter-spacing: .08rem;
 }
 
 .participants {
