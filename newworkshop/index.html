@@ -10,7 +10,7 @@
         @import url('https://fonts.googleapis.com/css2?family=Codystar&family=Quicksand:wght@300;500;600;700&display=swap');
     </style>
     <link rel="stylesheet" href="../styles/main.css">
-    <title>Workshops</title>
+    <title>Add a Participant</title>
 </head>
 
 <body>
@@ -19,16 +19,29 @@
        <div class="buttons">
         <button id="logout">Logout</button>
         <button id="add-participant">Add Participant</button>
-        <button id="add-workshop">Add Workshop</button>
+        <button id="workshops-page">Workshops</button>
         <button id="workshops-page">Workshops</button>
        </div>
 
-       <div class="workshop-container">
-
+       <div class="participant-form">
+           <div class="form-container">
+                <p class="workshop-name">Add Participant</p>
+                <div class="center-form">
+                    <form>
+                        <input id="input" placeholder="name" name="name">
+                        <select class="dropdown" name="workshop-id">
+                        <option value="" disabled selected >Choose a Workshop</option>
+                        </select>
+                        <button>Submit</button>
+                     </form>
+                </div>
+           </div>
        </div>
    </section>
     
-    <script type="module" src="./workshops.js"></script>
+    <script type="module" src="./newworkshop.js"></script>
 </body>
+
+
 
 </html>
