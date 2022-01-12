@@ -41,6 +41,7 @@ window.addEventListener('load', async() => {
        
         participantsEl.classList.add('participants');
         workshopDiv.classList.add('workshops');
+        workshopNameEl.classList.add('workshop-name');
 
         workshopNameEl.textContent = workshop.name;
 
