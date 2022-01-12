@@ -36,7 +36,14 @@ window.addEventListener('load', async() => {
 
         workshopNameEl.textContent = workshop.name;
 
-        // for each of this family's bunnies
+        // for each of the workshop's participants
+        for (let participant of workshop.participants) {
+
+            const participantEl = document.createElement('p');
+            
+            participantEl.classList.add('participant');
+            participantEl.textContent = participant.name;
+        }
 
 
         // make an element with the css class 'bunny', and put the bunny's name in the text content
