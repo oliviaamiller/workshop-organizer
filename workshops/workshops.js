@@ -1,7 +1,8 @@
 import { 
     checkAuth, 
     logout,
-    getWorkshops
+    getWorkshops,
+    deleteParticipant
 } from '../fetch-utils.js';
 
 checkAuth();
@@ -43,21 +44,20 @@ window.addEventListener('load', async() => {
             
             participantEl.classList.add('participant');
             participantEl.textContent = participant.name;
+
+            participantEl.addEventListener('click', async() => {
+                await deleteParticipant(participant.id);
+
+                await getWorkshops();
+            });
+            participantsEl.append(participantEl);
         }
-
-
-        // make an element with the css class 'bunny', and put the bunny's name in the text content
         
-        // add an event listener to the bunny el. On click, delete the bunny, then refetch and redisplay all families.
-
-
-        // append this bunnyEl to the bunniesEl
+        workshopDiv.append(workshopNameEl, participantsEl);
+        
+        workshopsEl.append(workshopDiv);
     
     }
-
-    // append the bunniesEl and nameEl to the familyEl
-
-    // append the familyEl to the familiesEl
     
 });
 
