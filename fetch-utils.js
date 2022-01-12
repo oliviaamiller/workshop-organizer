@@ -7,8 +7,7 @@ const client = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
 export async function getWorkshops() {
     const response = await client   
         .from('workshops')
-        .select()
-        .single();
+        .select('*, participants (*)');
 
     return checkError(response);
 }
