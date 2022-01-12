@@ -22,6 +22,14 @@ export async function deleteParticipant(id) {
     return checkError(response);
 }
 
+export async function createParticipant(participant) {
+    const response = await client 
+        .from('participants')
+        .insert(participant);
+    
+    return checkError(response);
+}
+
 export async function getUser() {
     return client.auth.session();
 }
