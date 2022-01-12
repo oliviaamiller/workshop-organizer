@@ -41,22 +41,40 @@ h3 {
 
 .buttons button {
     color: var(--background);
-    font-family: sans-serif;
-    font-weight: 600;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 700;
     text-transform: uppercase;
     background-color: var(--pink);
     border: none;
     cursor: pointer;
 }
 
+.participant-form form {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    padding: 1rem;
+}
 
-.workshop-container {
+form button {
+    cursor: pointer;
+}
+
+form input, select, button {
+    background-color: var(--title);
+    border: none;
+    padding: .3rem;
+    margin: .3rem;
+}
+
+
+.workshop-container, .participant-form {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.workshops {
+.workshops, .form-container {
     margin: 1rem;
     width: 90%;
     border: var(--pink) 2px dotted;
@@ -68,10 +86,18 @@ h3 {
     border: var(--background) 1px solid;
     padding: .5rem;
     margin: .5rem 1rem;
-    font-family: sans-serif;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 500;
 }
 
 .participants {
+    display: flex;
+    flex-direction: row;
     color: var(--title);
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 300;
+}
+
+.participants p {
     margin: 1.5rem;
 }
