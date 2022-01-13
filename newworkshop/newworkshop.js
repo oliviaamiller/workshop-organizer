@@ -1,8 +1,7 @@
 import { 
     checkAuth, 
     logout, 
-    // createWorkshop,
-    getWorkshops
+    createWorkshop
 } from '../fetch-utils.js';
 
 checkAuth();
@@ -37,34 +36,12 @@ form.addEventListener('submit', async(e) => {
 
     const data = new FormData(form);
 
-    const participantName = data.get('name');
-    const workshopId = data.get('workshop-id');
-
-    await createParticipant({
-        name: participantName,
-        workshop_id: workshopId
-    });
+    const workshopName = data.get('name');
+    
+    await createWorkshop(workshopName);
     
     window.location.href = '../workshops';
 });
-
-window.addEventListener('load', async() => {
-
-    const workshopDropdownEl = document.querySelector('select');
-
-    const workshops = await getWorkshops();
-
-    for (let workshop of workshops) {
-        const optionEl = document.createElement('option');
-
-        optionEl.value = workshop.id;
-
-        optionEl.textContent = workshop.name;
-
-        workshopDropdownEl.append(optionEl);
-    }
-});
-
 
 checkAuth();
 

@@ -30,6 +30,14 @@ export async function createParticipant(participant) {
     return checkError(response);
 }
 
+export async function createWorkshop(name) {
+    const response = await client
+        .from('workshops')
+        .insert(name);
+
+    return checkError(response);
+}
+
 export async function getUser() {
     return client.auth.session();
 }
