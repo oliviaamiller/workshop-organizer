@@ -3,7 +3,7 @@
 
 import { renderParticipant } from '../render-utils.js';
 
-const { test, skip } = QUnit;
+const { skip } = QUnit;
 
 skip('time to test a function', (expect) => {
     //Arrange
