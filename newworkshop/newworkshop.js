@@ -36,15 +36,11 @@ form.addEventListener('submit', async(e) => {
 
     const data = new FormData(form);
 
-    const workshopName = data.get('name');
+    const name = data.get('name');
     
-    await createWorkshop(workshopName);
+    await createWorkshop({
+        name: name
+    });
     
     window.location.href = '../workshops';
-});
-
-checkAuth();
-
-logoutButton.addEventListener('click', () => {
-    logout();
 });
