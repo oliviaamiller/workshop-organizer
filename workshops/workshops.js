@@ -13,6 +13,7 @@ const logoutButton = document.getElementById('logout');
 const participantButton = document.getElementById('add-participant');
 const workshopsEl = document.querySelector('.workshop-container');
 const workshopButton = document.getElementById('workshops-page');
+const newWorkshopButton = document.getElementById('add-workshop');
 
 logoutButton.addEventListener('click', () => {
     logout();
@@ -22,8 +23,12 @@ participantButton.addEventListener('click', () => {
     window.location.href = '../create';
 });
 
+newWorkshopButton.addEventListener('click', () => {
+    window.location.href = '../newworkshop';
+});
+
 workshopButton.addEventListener('click', () => {
-    window.location.href = '../';
+    window.location.href = './';
 });
 
 

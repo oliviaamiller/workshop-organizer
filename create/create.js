@@ -10,10 +10,25 @@ checkAuth();
 const form = document.querySelector('form');
 const logoutButton = document.getElementById('logout');
 const workshopButton = document.getElementById('workshops-page');
+const participantButton = document.getElementById('add-participant');
+const newWorkshopButton = document.getElementById('add-workshop');
+
+logoutButton.addEventListener('click', () => {
+    logout();
+});
+
+participantButton.addEventListener('click', () => {
+    window.location.href = './';
+});
+
+newWorkshopButton.addEventListener('click', () => {
+    window.location.href = '../newworkshop';
+});
 
 workshopButton.addEventListener('click', () => {
     window.location.href = '../workshops';
 });
+
 
 form.addEventListener('submit', async(e) => {
     e.preventDefault();
@@ -46,11 +61,4 @@ window.addEventListener('load', async() => {
 
         workshopDropdownEl.append(optionEl);
     }
-});
-
-
-checkAuth();
-
-logoutButton.addEventListener('click', () => {
-    logout();
 });
